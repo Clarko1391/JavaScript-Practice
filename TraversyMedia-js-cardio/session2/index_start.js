@@ -33,22 +33,22 @@ function longestWord(sen) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
-  //SOLUTION 1 using 'while' loop
-  // // init chunked array
-  // const chunkedArr = [];
-  // // set index
-  // let i = 0;
+  // //SOLUTION 1 using 'while' loop
+  // // // init chunked array
+  // // const chunkedArr = [];
+  // // // set index
+  // // let i = 0;
 
-  // // loop while index is less than the array length
-  // while (i < arr.length) {
-  //   // slice out from the index to the index + the chunk length and push onto the chunked array
-  //   chunkedArr.push(arr.slice(i, i + len));
-  //   // increment by chunk len
-  //   i += len;
-  // }
-  // return chunkedArr;
+  // // // loop while index is less than the array length
+  // // while (i < arr.length) {
+  // //   // slice out from the index to the index + the chunk length and push onto the chunked array
+  // //   chunkedArr.push(arr.slice(i, i + len));
+  // //   // increment by chunk len
+  // //   i += len;
+  // // }
+  // // return chunkedArr;
 
-  //SOLUTION 2 using 'for each'
+  // //SOLUTION 2 using 'for each'
 
   //init chunkedArr
   const chunkedArr = [];
@@ -57,7 +57,7 @@ function chunkArray(arr, len) {
   arr.forEach(function(val) {
     //get last element
     const last = chunkedArr[chunkedArr.length - 1];
-    
+
     //check if last exists and if its equal to the chunk length
     if (!last || last.length === len) {
       chunkedArr.push([val]);
@@ -74,11 +74,17 @@ function chunkArray(arr, len) {
 // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
 
 function flattenArray(arrays) {
-  // //SOLUTION 1 (throws error that a.concat(b) is not a function, not sure what I'm missing)
-  // return arrays.reduce(function (a, b) {
+  // //SOLUTION 1 
+  // return arrays.reduce(function(a, b) {
   //   return a.concat(b);
   // });
   
+
+  // SOLUTION 2
+  // return [].concat.apply([], arrays);
+
+  //SOLUTION 3
+  return [].concat(...arrays);
 }
 
 // CHALLENGE 4: ANAGRAM
