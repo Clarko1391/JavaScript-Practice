@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SpeedTyping!</title>
+</head>
+<body>
+    <header id="mainHeader">
+        <h1>Speed Typing!</h1>
+    </header>
+    <section>
+        <!-- Word & Input -->
+        <div class="container">
+            <div class="row">
+                <p id="leadMessage">Type the given word within <span id="seconds"></span> seconds!</p>
+                <h2 id="gameWord"></h2>
+                <input type="text" placeholder="Start typing..." id="wordInput" autofocus>
+                <h4 id="message"></h4>
+            </div>
+    
+        <!-- Time & Score Columns -->
+            <div class="row scoreRow">
+                <div class="scoreBox">
+                    <h3>Time Left:
+                        <span id="time"></span>
+                    </h3>
+                </div>
+                <div class="scoreBox">
+                    <h3>Score:
+                        <span id="score">0</span>
+                    </h3>
+                </div>
+            </div>
+        <!-- Instructions -->
+            <div class="row">
+                <div id="difficultySelector">
+                    <button id="difficulty">Choose your difficulty</button>
+                    <p id="difficultyDisplay">easy</p>
+                </div>
+                <div id="instructionCard">
+                    <h5>Instructions</h5>
+                    <p>Type each word in the given amount of time to score a point.
+                    To play again, just type the current word. Your score will reset automatically. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p id="copyright">Clark Oake &copy; 2020</p>
+    </footer>
+<script src="main.js"></script>  
+</body>
+</html>
