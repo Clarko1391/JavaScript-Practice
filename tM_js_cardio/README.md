@@ -1,5 +1,5 @@
-# JavaScript Cardio
+# JavaScript Cardio from Traversy Media
 
-> Intermediate JavaScript challenges.
+This is a series of video tutorials that go through several solutions to js problems and contains intermediate to advanced js
 
-Feel free to make a pull request, but please use the `index_extra.js` file. Comment out your solution and leave "Solution By [YOUR NAME]". Please keep the file neat and do NOT change anyone else's solutions.
+(https://www.youtube.com/watch?v=M2bJBuaOeOQ)
